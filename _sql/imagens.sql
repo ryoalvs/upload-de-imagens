@@ -1,0 +1,10 @@
+START TRANSACTION;
+CREATE DATABASE IF NOT EXISTS dbimagens;
+USE dbimagens;
+
+CREATE TABLE IF NOT EXISTS imagens (
+    code int NOT NULL AUTO_INCREMENT,
+    img blob NOT NULL,
+    CONSTRAINT pk_imagens PRIMARY KEY (code)
+) ENGINE=MyISAM DEFAULT CHARSET =utf8 COLLATE=utf8_general_ci;
+COMMIT;
